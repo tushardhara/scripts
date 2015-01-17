@@ -1,0 +1,19 @@
+<h1>{{name}}</h1>
+<div class="row">
+  <div class="col-md-6">
+  	<select ng-options="o.command for o in options" ng-model="selectedOption" ></select>
+  	<form class="form-horizontal">
+	  <div class="control-group" ng-repeat="parameter in parameters track by $index">
+	    <label class="control-label">{{parameter[0]}} <strong ng-if="parameter[2]">*</strong></label>
+	    <div class="controls">
+	      <input type="text" ng-model="createstring[$index]">
+	    </div>
+	  </div>
+	</form>
+  </div>
+  <div class="col-md-6">
+  	<p ng-model="createcommand">{{createcommand}}</p>
+  </div>
+</div>
+
+
